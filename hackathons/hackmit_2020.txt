@@ -1,0 +1,7 @@
+Status: LOST (Placement Unknown)
+
+Dates: September 18th - September 20th, 2020
+
+Teammates: Adam, Matthew, Rohit
+
+Project: https://github.com/MatthewNanas/SecAI
