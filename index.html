@@ -17,42 +17,77 @@
 
 	<style type="text/css">
 		body {
+			animation: color-change 20s infinite;
 			background-color: #0e0e10;
 			color: white;
 			font-weight: bold;
 			font-size: 20px;
+		}
+		@keyframes color-change {
+			0% { background-color: #0e0e10; }
+			25% { background-color: #8761AB; }
+			50% { background-color: #2253D8; }
+			75% { background-color: #8761AB; }
+			100% { background-color: #0e0e10; }
 		}
 		h1 {
 			color: #2289D8;
 			text-align: center; 
 			padding-top: 15px;
 		}
-		iframe {
-			display: block;
-			margin: 0 auto;
+		.main {
+		    margin: 0;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    -ms-transform: translate(-50%, -50%);
+		    transform: translate(-50%, -50%);
+		    z-index: 2;
+		}
+		#particles-js {
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    overflow: hidden;
+		    z-index: 0;
+		}
+		#footer {
+			border-radius: 25px;
+			background-color: #0e0e10;
+			padding: 10px;
 		}
 	</style>
 
 	<title>Minibeast's Site</title>
 </head>
 <body>
-	<h1><a style="color: inherit;" href="./index.html"><b>Ian C</b></a> <!-- <span style="font-size: 15px; vertical-align: super; color: white;">[they/them]</span> --></h1>
-	<p style="text-align: center;">Some 16 year old kid learning Cybersecurity, Scripting, and a bunch of other things.<br>My online alias is Minibeast. I speedrun sometimes<a href="./speedruns.html">.</a></p>
+	<div id="particles-js"></div>
 
-	<div style="padding-left: 10px;">
-		<h2><a style="color: inherit;" href="./hackathons/" target="_blank">Hackathons</a></h2>
-		<h4 style="font-weight: bold; color: #2289D8;">2 / 3</h4>
-		<br>
-		<p><a style="color: inherit;" href="./hackathons/codeday_nov2019.txt" target="_blank">CodeDay DC - November 2019</a><br>Status: WON - Best in Class (Website)</p>
-		<p><a style="color: inherit;" href="./hackathons/codeday_feb2020.txt" target="_blank">CodeDay DC - February 2020</a><br>Status: WON - Best in Class (Application)</p>
-		<p><a style="color: inherit;" href="./hackathons/hackmit_2020.txt" target="_blank">Hack MIT 2020</a><br>Status: LOST</p>
+	<div class="main">
+
+		<h1><b>Ian C</b> <!-- <span style="font-size: 15px; vertical-align: super; color: white;">[they/them]</span> --></h1>
+		<p style="text-align: center;">Some 16 year old kid learning Cybersecurity, Scripting, and a bunch of other things.<br>My online alias is Minibeast. I speedrun sometimes.</p>
+
+		<div style="padding-left: 10px;">
+			<h2>Hackathons</h2>
+			<h4 style="font-weight: bold; color: #2289D8;">2 / 3</h4>
+			<br>
+			<p><a style="color: inherit;" href="./hackathons/codeday_nov2019.html" target="_blank">CodeDay DC - November 2019</a></p>
+			<p><a style="color: inherit;" href="./hackathons/codeday_feb2020.html" target="_blank">CodeDay DC - February 2020</a></p>
+			<p><a style="color: inherit;" href="./hackathons/hackmit_2020.html" target="_blank">Hack MIT 2020</a></p>
+
+			<br>
+
+			<h2>Personal Projects</h2>
+			<p><a style="color: inherit;" href="http://167.71.107.25:5000" target="_blank">SRDC verification analyzer</a> - Small data collection tool running on a Flask webserver. Used to collect verification statistics.</p>
+			<p><a style="color: inherit;" href="https://github.com/Minibeast/SMO-Randomizer" target="_blank">SMO Randomizer</a> - Simple script that generates a random set of moons for a Super Mario Odyssey Any% run.</p>
+			<p><a style="color: inherit;" href="https://github.com/Minibeast/amongus-discord-bot" target="_blank">Among Us Discord Bot</a> - Discord bot that helps to manage a waiting list for Among Us lobbies.</p>
+			<p><a style="color: inherit;" href="https://github.com/Minibeast/aminibOt" target="_blank">aminibOt</a> - Discord and Twitch bot that does misc stuff for my personal Twitch stream and Discord Server(s).</p>
+		</div>
+		<h1 id="footer" style="font-size: 25px; color: white"><span style="color: #2253D8">Blue:</span> #2253D8 (34,83,216)<br><span style="color: #2289D8">Lighter Blue:</span> #2289D8 (34,137,216)<br><span style="color: #8761AB">Purple:</span> #8761AB (135, 97, 171)</h1>
 	</div>
-	<h1 style="font-size: 25px; color: white"><span style="color: #2253D8">Blue:</span> #2253D8 (34,83,216)<br><span style="color: #2289D8">Lighter Blue:</span> #2289D8 (34,137,216)</h1>
 
-
-	<!--- Bootstrap JS --->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<script src="particles.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
