@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 	<!--- favicon --->
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="./images/favicon.ico" type="image/x-icon"/>
 
 	<!--- Bootstrap CCS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -14,46 +14,52 @@
 	<!--- Google API Font --->
 	<link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'>
 
+	<link rel="stylesheet" href="./main.css">
 
-	<style type="text/css">
-		body {
-			background-color: #0e0e10;
-			color: white;
-			font-weight: bold;
-			font-size: 20px;
-		}
-		h1 {
-			color: #2289D8;
-			text-align: center; 
-			padding-top: 15px;
-		}
-		iframe {
-			display: block;
-			margin: 0 auto;
-		}
-	</style>
-
-	<title>Speedruns • Minibeast's Site</title>
+	<title>Minibeast's Site</title>
 </head>
 <body>
-	<h1><a style="color: inherit;" href="./index.html"><b>Ian C</b></a> <!-- <span style="font-size: 15px; vertical-align: super; color: white;">[they/them]</span> --></h1>
-	<p style="text-align: center">I started speedrunning as a hobby February 2019. While I wasn't very good at the games I ran, I enjoyed doing it.<br>Speedrunning is how most people know who I am on the internet.</p>
-	<p style="width: 700px; position: fixed;"><br><br><br><br>My first speedgame was Super Mario Odyssey. During the summer of 2019, I got bored with Odyssey, so I started branching out into other speedgames and their communities. I stumbled upon the Portal community and learned some basics about the speedrun for both games. After that little stint, I returned to Odyssey to improve my times. Fast forward a year later, and I decided to go back to Portal and focus on getting decent times in the Out of Bounds category. As of now, I'm learning Super Mario 64 after purchasing Super Mario 3D All-Stars on launch.</p>
-	<!---
-	<div class="panels">
-		<p>Notable things</p>
-		<p style="font-size: 10px">(They aren't actually that notable)</p>
+	<div id="particles-js"></div>
 
-		<p>Extensions Moderator and Verifier for Super Mario Odyssey</p>
+	<div class="main">
+		<h1><b>Speedrunning</b></h1>
+		<p style="text-align: center;">Use the dropdown list to select a game. <br>It'll then return a list of all my Personal Bests in that game.</p>
+
+		<input style="width: 270px" placeholder="Super Mario 64" id="gameSelect" list="suggestions">
+			<datalist id="suggestions">
+				<option value="Super Mario 64"></option>
+				<option value="Super Mario Odyssey"></option>
+				<option value="Portal"></option>
+				<option value="Portal 2"></option>
+				<option value="Half-Life"></option>
+				<option value="SMO Category Extensions"></option>
+			</datalist>
+
+		<button style="display: inline-block; text-align: center">Go</button>
+		<br>
+
+		<p id="pb_list"></p>
 	</div>
-	--->
-	<p style="text-align: center; color: #2289D8"><a style="color: inherit;" href="https://www.speedrun.com/user/Minibeast" target="_blank">Current Speedruns</a></p>
-	<iframe class="embed-responsive-item" width="470" height="700" src="https://docs.google.com/spreadsheets/d/1RkHcnlkXBLUdr7O2tgbuWhM54UoxKygPLTs3Cb5Ef6k/htmlview" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen ></iframe>
 
+	<script src="./particles.js"></script>
+    <script src="./app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<!--- Bootstrap JS --->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+    	$(document).ready(function(){
+    		$("button").click(function(){
+    			let information = {game: document.getElementById("gameSelect").value}
+    			$.ajax({
+    				type: "POST",
+    				url: "http://167.71.107.25:7045",
+    				data: JSON.stringify(information),
+    				contentType: 'application/json;charset=UTF-8',
+    				success: function(result) {
+    					document.getElementById("pb_list").innerHTML = result;
+    				}
+    			});
+    		});
+    	});
+    </script>
 </body>
 </html>

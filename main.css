@@ -38,3 +38,11 @@ h1 {
 	background-color: #0e0e10;
 	padding: 10px;
 }
+button {
+    font-size:1vw;
+    margin-top:1vw;
+    width: 9vw;
+    background-color: #E7E1E1;
+    border: none;
+    border-radius: 1vw;
+}
