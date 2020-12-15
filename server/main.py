@@ -100,4 +100,4 @@ def main():
 
 
 if __name__ == '__main__':
-    app.run(host="167.71.107.25", port=7045)
+    app.run(host="167.71.107.25", port=7045, ssl_context="adhoc")
