@@ -28,7 +28,7 @@
 		<div style="text-align: center;">
 			<select style="width: 270px;" id="gameSelect">
 				<option disabled selected value> -- select an option -- </option>
-				<option value="Super Mario 64">Super Mario 64</option>
+				<option value="Super Mario 3D All Stars">Super Mario 3D All Stars</option>
 				<option value="Super Mario Odyssey">Super Mario Odyssey</option>
 				<option value="Portal">Portal</option>
 				<option value="Portal 2">Portal 2</option>
@@ -75,7 +75,7 @@
     			if (game_name == "Portal") {game_id = "4pd0n31e"}
     			else if (game_name == "Portal 2") {game_id = "om1mw4d2"}
     			else if (game_name == "Half-Life") {game_id = "n268nk6p"}
-    			else if (game_name == "Super Mario 64") {game_id = "m1zj4406"}
+    			else if (game_name == "Super Mario 3D All Stars") {game_id = "m1zj4406"}
     			else if (game_name == "Super Mario Odyssey") {game_id = "76r55vd8"}
     			else if (game_name == "SMO Category Extensions") {game_id = "m1mxxw46"}
     			else if (game_name == "Minecraft") {game_id = "j1npme6p"}
@@ -99,15 +99,14 @@
     						var player_array = [];
 
 
-    						if (game_id != "m1zj4406") {title += i["category"]["data"]["name"];}
+    						title += i["category"]["data"]["name"];
 
     						i["category"]["data"]["variables"]["data"].forEach(j => {
     							if (j["is-subcategory"] == true && j["id"] in i["run"]["values"]) {
     								var_array.push(j["id"]);
     								var_array.push(i["run"]["values"][j["id"]]);
 
-    								if (game_id != "m1zj4406") {title += " - ";}
-    								title += j["values"]["values"][i["run"]["values"][j["id"]]]["label"];
+    								title += " - " + j["values"]["values"][i["run"]["values"][j["id"]]]["label"];
     							}
     						});
 
