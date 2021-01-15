@@ -21,13 +21,14 @@
 <body>
 	<div id="particles-js"></div>
 
-	<div class="main">
+	<div class="short_main">
 		<h1><b>Speedrunning</b></h1>
 		<p style="text-align: center;">Use the dropdown list to select a game. <br>It'll then return a list of all my Personal Bests in that game.</p>
 
 		<div style="text-align: center;">
 			<select style="width: 270px;" id="gameSelect">
 				<option disabled selected value> -- select an option -- </option>
+				<option value="Super Mario 64">Super Mario 64</option>
 				<option value="Super Mario 3D All Stars">Super Mario 3D All Stars</option>
 				<option value="Super Mario Odyssey">Super Mario Odyssey</option>
 				<option value="Portal">Portal</option>
@@ -101,6 +102,7 @@
     			else if (game_name == "SMO Category Extensions") {game_id = "m1mxxw46"}
     			else if (game_name == "Minecraft") {game_id = "j1npme6p"}
     			else if (game_name == "SM64 Randomizer") {game_id = "9d3r20wd"}
+    			else if (game_name == "Super Mario 64") {game_id = "o1y9wo6q"}
 
     			if (game_id.length == 0) {document.getElementById("pb_list").innerHTML = "<br>Invalid Request"}
 
@@ -190,6 +192,8 @@
 
 			    						output_result += time_weblink + " (" + place.toString() + " place) | " + platform + " | " + date + "<br><br>";
 			    					});
+
+			    					if (game_id == "m1zj4406") {output_result += "<br><em>Up to date Super Mario 64 Personal Bests are on the SM64 Page, not the 3DAS Page.</em>"}
 
 			    					document.getElementById("pb_list").innerHTML = output_result;
 

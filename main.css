@@ -18,6 +18,11 @@ h1 {
 	padding-top: 15px;
 }
 .main {
+    position: relative;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.short_main {
     margin: 0;
     position: absolute;
     top: 50%;
