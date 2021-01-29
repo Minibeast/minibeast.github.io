@@ -28,15 +28,18 @@
 		<div style="text-align: center;">
 			<select style="width: 270px;" id="gameSelect">
 				<option disabled selected value> -- select an option -- </option>
+				<option disabled value> - Main Games - </option>
 				<option value="Super Mario 64">Super Mario 64</option>
-				<option value="Super Mario 3D All Stars">Super Mario 3D All Stars</option>
 				<option value="Super Mario Odyssey">Super Mario Odyssey</option>
+				<option value="Super Mario 3D All Stars">Super Mario 3D All Stars</option>
 				<option value="Portal">Portal</option>
 				<option value="Portal 2">Portal 2</option>
 				<option value="Half-Life">Half-Life</option>
 				<option value="Minecraft">Minecraft</option>
+				<option disabled value> - CEs and Rom Hacks - </option>
 				<option value="SMO Category Extensions">SMO Category Extensions</option>
 				<option value="SM64 Randomizer">SM64 Randomizer</option>
+				<option value="SM64 Online">SM64 Online</option>
 			</select>
 
 			<button style="display: inline-block; text-align: center">Go</button>
@@ -103,6 +106,7 @@
     			else if (game_name == "Minecraft") {game_id = "j1npme6p"}
     			else if (game_name == "SM64 Randomizer") {game_id = "9d3r20wd"}
     			else if (game_name == "Super Mario 64") {game_id = "o1y9wo6q"}
+    			else if (game_name == "SM64 Online") {game_id = "4d77gld7"}
 
     			if (game_id.length == 0) {document.getElementById("pb_list").innerHTML = "<br>Invalid Request"}
 
