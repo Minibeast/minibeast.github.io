@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <updates>
+	<update version="1.5.0">
+		<files>
+			<file path="Components/LiveSplit.Discord.dll" status="changed"/>
+		</files>
+		<changelog>
+			<change>Added the option to include the Timer Offset when calculating elapsed time.</change>
+		</changelog>
+	</update>
 	<update version="1.4.0">
 		<files>
 			<file path="Components/LiveSplit.Discord.dll" status="changed"/>
