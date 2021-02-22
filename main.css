@@ -90,3 +90,7 @@ i:hover span {
     visibility: visible;
     opacity: 1;
 }
+
+#download_count {
+    font-style: italic;
+}
