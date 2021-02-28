@@ -6,7 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 	<!--- favicon --->
-	<link rel="icon" href="./images/favicon.ico" type="image/x-icon"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+	<link rel="manifest" href="./favicon/site.webmanifest">
 
 	<!--- Bootstrap CCS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -19,9 +22,7 @@
 	<title>Minibeast's Site</title>
 </head>
 <body>
-	<div id="particles-js"></div>
-
-	<div class="short_main">
+	<div class="main">
 		<h1><b>Speedrunning</b></h1>
 		<p style="text-align: center;">Use the dropdown list to select a game. <br>It'll then return a list of all my Personal Bests in that game.</p>
 
@@ -44,11 +45,11 @@
 				<option value="SM64 Online">SM64 Online</option>
 			</select>
 
-			<button style="display: inline-block; text-align: center">Go</button>
+			<button class="gameSelectBtn" style="display: inline-block; text-align: center">Go</button>
 			<br>
 		</div>
 
-		<p id="pb_list"></p>
+		<p id="pb_list" style="text-align: center;"></p>
 	</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

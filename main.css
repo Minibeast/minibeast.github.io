@@ -22,34 +22,22 @@ h1 {
     margin-left: 25%;
     margin-right: 25%;
 }
-.short_main {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-}
 #footer {
 	border-radius: 25px;
 	background-color: #0e0e10;
 	padding: 10px;
 }
-button {
-    font-size:1vw;
-    margin-top:1vw;
-    width: 9vw;
+button.gameSelectBtn {
+    width: 200px;
     background-color: #E7E1E1;
     border: none;
     border-radius: 1vw;
+}
+button.hackathons {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
 }
 i {
     position: relative; /** ADD THIS TO i TAG. This do magic! It's necessary **/

@@ -6,7 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 	<!--- favicon --->
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+	<link rel="manifest" href="./favicon/site.webmanifest">
 
 	<!--- Bootstrap CCS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -19,26 +22,29 @@
 	<title>Minibeast's Site</title>
 </head>
 <body>
-	<div id="particles-js"></div>
-
 	<div class="main">
 
 		<h1><b>Ian C</b></h1>
-		<p style="text-align: center;">Some 16 year old kid learning Cybersecurity, Scripting, and a bunch of other things.<br>I <a style="color: inherit;" href="./speedruns.html">speedrun</a> sometimes.</p>
+		<p style="text-align: center;">Some 16 year old kid learning Cybersecurity, Scripting, and a bunch of other things.<br>I <a style="color: inherit;" href="./speedruns">speedrun</a> sometimes.</p>
 
 		<div style="padding-left: 10px;">
 			<h2>Hackathons</h2>
 			<h4 style="font-weight: bold; color: #2289D8;">3 / 4</h4>
 			<br>
-			<p><a style="color: inherit;" href="./hackathons/codeday_nov2019.html">CodeDay DC - November 2019</a></p>
-			<p><a style="color: inherit;" href="./hackathons/codeday_feb2020.html">CodeDay DC - February 2020</a></p>
-			<p><a style="color: inherit;" href="./hackathons/hackmit_2020.html">Hack MIT 2020</a></p>
-			<p><a style="color: inherit;" href="./hackathons/teenhacks_2020.html">TeenHacks Fall 2020</a></p>
+			<button class="hackathons" id="codeday_nov2019">CodeDay DC - November 2019</button>
+			<br>
+			<button class="hackathons" id="codeday_feb2020">CodeDay DC - February 2020</button>
+			<br>
+			<button class="hackathons" id="hackmit_2020">Hack MIT 2020</button>
+			<br>
+			<button class="hackathons" id="teenhacks_2020">TeenHacks Fall 2020</button>
+			<p id="hackathon_desc" style="background-color: #0e0e10; border: none; border-radius: 25px; display: none;"></p>
 
+			<br>
 			<br>
 
 			<h2><a style="color: inherit;" href="https://github.com/Minibeast" target="_blank">Personal Projects</a></h2>
-			<p><a style="color: inherit;" href="http://167.71.107.25:5000" target="_blank">SRDC verification analyzer</a> - Small data collection tool running on a Flask webserver. Used to collect verification statistics.</p>
+			<p><a style="color: inherit;" href="http://server.minibeast.me:5000" target="_blank">SRDC verification analyzer</a> - Small data collection tool running on a Flask webserver. Used to collect verification statistics.</p>
 			<p><a style="color: inherit;" href="https://github.com/Minibeast/LiveSplit.Discord" target="_blank">LiveSplit.Discord</a> - Component for <a style="color: inherit;" href="https://livesplit.org" target="_blank">LiveSplit</a> that displays details about the user's current run.<br><span id="download_count"></span></p>
 			<p><a style="color: inherit;" href="https://github.com/Minibeast/amongus-discord-bot" target="_blank">Among Us Discord Bot</a> - Discord bot that helps to manage a waiting list for Among Us lobbies.</p>
 			<p><a style="color: inherit;" href="https://github.com/Minibeast/aminibOt" target="_blank">aminibOt</a> - Discord and Twitch bot that does misc stuff for my personal Twitch stream and Discord Server(s).</p>
@@ -47,5 +53,6 @@
 	</div>
 
     <script src="livesplit_discord_download_count.js"></script>
+    <script src="hackathons.js"></script>
 </body>
 </html>
