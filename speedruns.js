@@ -52,29 +52,7 @@ $(document).ready(function(){
 		else if (game_name == "Super Mario 64") {game_id = "o1y9wo6q"}
 		else if (game_name == "SM64 Online") {game_id = "4d77gld7"}
 		else if (game_name == "Ocarina of Time") {game_id = "j1l9qz1g"}
-
-		if (game_name == "Super Mario Sunshine")
-		{
-			document.getElementById("pb_list").innerHTML = "<br>Please wait for Google.com..."
-			$.ajax("https://spreadsheets.google.com/feeds/list/11fsH6l03NuNludkG1EgwhN5ZH4eF7eMs-RJ_lrg5C5g/od6/public/values?alt=json-in-script").done(function(result) {
-				result = result.substring(28, result.length - 2);
-				result = JSON.parse(result);
-				output_result = "<br>";
-
-				output_result += "Any% | "
-
-				output_result += result["feed"]["entry"][0]["gsx$any"]["$t"] + " | ";
-
-				output_result += "Wii (Nintendont) | ";
-
-				output_result += result["feed"]["entry"][0]["gsx$date"]["$t"];
-
-				output_result += "<br><br><em>Nintendont, my current method of playing Sunshine, is banned on the Speedrun.com leaderboards.<br> I plan on getting an official copy of the game soon.</em>"
-
-				document.getElementById("pb_list").innerHTML = output_result;
-			});
-		}
-		else {
+		else if (game_name == "Super Mario Sunshine") {game_id = "v1pxjz68"}
 
 		if (game_id.length == 0) {document.getElementById("pb_list").innerHTML = "<br>Invalid Request"}
 
@@ -174,6 +152,5 @@ $(document).ready(function(){
 				}
 			});
 		}
-	}
 	});
 });
