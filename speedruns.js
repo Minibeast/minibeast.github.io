@@ -54,6 +54,13 @@ $(document).ready(function(){
 		else if (game_name == "Ocarina of Time") {game_id = "j1l9qz1g"}
 		else if (game_name == "Super Mario Sunshine") {game_id = "v1pxjz68"}
 
+		if (game_name == "Ocarina of Time Randomizer")
+		{
+			document.getElementById("pb_list").innerHTML = "<br><iframe class=\"ootr_iframe\" width=\"100%\" height=\"600px\" src=\"https://docs.google.com/spreadsheets/d/1ksAlrZ50XSR4aD5fkJJ4UlWvx9ZY54inlFPqJNDy4tU/htmlview\"></iframe>";
+			$('.ootr_iframe').css('height', ($(window).height() / 2)+'px');
+			return;
+		}
+
 		if (game_id.length == 0) {document.getElementById("pb_list").innerHTML = "<br>Invalid Request"}
 
 		else {
