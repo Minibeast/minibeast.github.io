@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <updates>
+	<update version="1.6.0">
+		<files>
+			<file path="Components/LiveSplit.Discord.dll" status="changed"/>
+		</files>
+		<changelog>
+			<change>Added options to adjust the formatting of the %delta parameter.</change>
+			<change>Added the option to change the comparison used in the Rich Presence.</change>
+			<change>Added the option to remove subsplit syntax from the %splitname parameter.</change>
+			<change>Changed small parts of error handling with the Discord interface.</change>
+		</changelog>
+	</update>
 	<update version="1.5.7">
 		<files>
 			<file path="Components/LiveSplit.Discord.dll" status="changed"/>

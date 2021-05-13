@@ -1,11 +1,11 @@
-var totalDownloads = 0;
+var totalDownloads = -44;
 
 var handleApiResponse = function() {
   if (xmlHttp.readyState === 4) {
     var releasesData = JSON.parse(xmlHttp.responseText);
     totalDownloads += releasesData.reduce(
       function (total, current) {
-        return total + current.assets[2].download_count;
+        return total + current.assets[0].download_count + current.assets[1].download_count;
       },
       0
     );
