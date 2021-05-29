@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <updates>
+	<update version="1.6.1">
+		<files>
+			<file path="Components/LiveSplit.Discord.dll" status="changed"/>
+		</files>
+		<changelog>
+			<change>Fixed issue with %time using a null value.</change>
+		</changelog>
+	</update>
 	<update version="1.6.0">
 		<files>
 			<file path="Components/LiveSplit.Discord.dll" status="changed"/>
