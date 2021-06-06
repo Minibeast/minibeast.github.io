@@ -37,24 +37,10 @@ function bubbleSortAlgo(arraaytest, arraaydata){
 }
 
 $(document).ready(function(){
-	$("button").click(function(){
-		let game_name = document.getElementById("gameSelect").value;
-		var game_id = "";
+	$("#gameSelect").change(function(){
+		let game_id = document.getElementById("gameSelect").value;
 
-		if (game_name == "Portal") {game_id = "4pd0n31e"}
-		//else if (game_name == "Portal 2") {game_id = "om1mw4d2"}
-		//else if (game_name == "Half-Life") {game_id = "n268nk6p"}
-		//else if (game_name == "Super Mario 3D All Stars") {game_id = "m1zj4406"}
-		else if (game_name == "Super Mario Odyssey") {game_id = "76r55vd8"}
-		else if (game_name == "SMO Category Extensions") {game_id = "m1mxxw46"}
-		else if (game_name == "Minecraft") {game_id = "j1npme6p"}
-		else if (game_name == "SM64 Randomizer") {game_id = "9d3r20wd"}
-		else if (game_name == "Super Mario 64") {game_id = "o1y9wo6q"}
-		else if (game_name == "SM64 Online") {game_id = "4d77gld7"}
-		else if (game_name == "Super Mario Sunshine") {game_id = "v1pxjz68"}
-		else if (game_name == "Multiple Mario Games") {game_id = "9d3kxw1l"}
-
-		if (game_name == "Ocarina of Time Randomizer")
+		if (game_id == "OoTR")
 		{
 			document.getElementById("pb_list").innerHTML = "<br><iframe class=\"ootr_iframe\" width=\"100%\" height=\"600px\" src=\"https://docs.google.com/spreadsheets/d/1ksAlrZ50XSR4aD5fkJJ4UlWvx9ZY54inlFPqJNDy4tU/htmlview\"></iframe>";
 			$('.ootr_iframe').css('height', ($(window).height() / 2.5)+'px');
@@ -160,4 +146,5 @@ $(document).ready(function(){
 			});
 		}
 	});
+	$("#gameSelect").trigger("change");
 });
