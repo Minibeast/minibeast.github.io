@@ -1,49 +1,56 @@
 body {
-	animation: color-change 20s infinite;
 	background-color: #0e0e10;
 	color: white;
 	font-weight: bold;
 	font-size: 20px;
 }
-@keyframes color-change {
-	0% { background-color: #0e0e10; }
-	25% { background-color: #8761AB; }
-	50% { background-color: #2253D8; }
-	75% { background-color: #8761AB; }
-	100% { background-color: #0e0e10; }
-}
+
 h1 {
 	color: #2289D8;
 	text-align: center; 
 	padding-top: 15px;
 }
+
 .main {
     position: relative;
+}
+
+.content {
     margin-left: 25%;
     margin-right: 25%;
+    padding-left: 10px;
 }
-#footer {
-	border-radius: 25px;
-	background-color: #0e0e10;
-	padding: 10px;
+
+.header {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background: linear-gradient(to bottom right, #2253D8, #8761AB);
+    text-align: center;
 }
+
 button.gameSelectBtn {
     width: 200px;
     background-color: #E7E1E1;
     border: none;
     border-radius: 1vw;
 }
+
 button.hackathons {
     background: none;
     border: none;
-    color: white;
+    color: black;
     font-weight: bold;
 }
+
 i {
     position: relative; /** ADD THIS TO i TAG. This do magic! It's necessary **/
     font-weight: bold;
     font-style: normal;
 }
+
 i span {
     visibility: hidden;
     opacity:  0;
@@ -74,6 +81,7 @@ i span {
     -webkit-transition-duration: 0.2s;
     -webkit-transition-property: opacity;
 }
+
 i:hover span {
     visibility: visible;
     opacity: 1;
@@ -81,4 +89,35 @@ i:hover span {
 
 #download_count {
     font-style: italic;
+}
+
+.nav {
+    display: block;
+    color: black;
+    width: 150px;
+    padding: 5px;
+    background: linear-gradient(#ffffff, #dddddd);
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #222222;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+li {
+    margin-right: 2px;
+    display: inline-block;
 }

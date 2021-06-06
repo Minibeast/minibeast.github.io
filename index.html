@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
-	<!--- favicon --->
 	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -19,40 +18,65 @@
 
 	<link rel="stylesheet" href="main.css">
 
-	<title>Minibeast's Site</title>
+	<title>minibeast.me</title>
 </head>
 <body>
 	<div class="main">
+		<div class="header">
+			<h1><b>Ian C</b></h1>
+			<p style="text-align: center; color: #ffffff">Student learning Cybersecurity, Scripting, and a bunch of other things.</p>
+			<div style="text-align: center;">
+                <ul>
+                	<li>
+                        <a class="nav" href="https://twitter.com/aMinibeast" target="_blank">
+                            <div class="nav-content">Twitter</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav" href="https://github.com/Minibeast" target="_blank">
+                            <div class="nav-content">GitHub</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+		</div>
 
-		<h1><b>Ian C</b></h1>
-		<p style="text-align: center;">Student learning Cybersecurity, Scripting, and a bunch of other things.<br>I <a style="color: inherit;" href="./speedruns">speedrun</a> sometimes.</p>
-
-		<div style="padding-left: 10px;">
-			<h2>Hackathons</h2>
-			<h4 style="font-weight: bold; color: #2289D8;">3 / 4</h4>
-			<br>
-			<button class="hackathons" id="codeday_nov2019">CodeDay DC - November 2019</button>
-			<br>
-			<button class="hackathons" id="codeday_feb2020">CodeDay DC - February 2020</button>
-			<br>
-			<button class="hackathons" id="hackmit_2020">Hack MIT 2020</button>
-			<br>
-			<button class="hackathons" id="teenhacks_2020">TeenHacks Fall 2020</button>
-			<p id="hackathon_desc" style="background-color: #0e0e10; border: none; border-radius: 25px; display: none;"></p>
-
-			<br>
-			<br>
-
-			<h2><a style="color: inherit;" href="https://github.com/Minibeast" target="_blank">Personal Projects</a></h2>
+		<h2 style="margin-left: 23%; padding-top: 30px;">Projects</h2>
+		<div class="content">
 			<p><a style="color: inherit;" href="http://server.minibeast.me:5000" target="_blank">SRDC verification analyzer</a> - Small data collection tool running on a Flask webserver. Used to collect verification statistics.</p>
 			<p><a style="color: inherit;" href="https://github.com/Minibeast/LiveSplit.Discord" target="_blank">LiveSplit.Discord</a> - Component for <a style="color: inherit;" href="https://livesplit.org" target="_blank">LiveSplit</a> that displays details about the user's current run.<br><span id="download_count"></span></p>
 			<p><a style="color: inherit;" href="https://github.com/Minibeast/amongus-discord-bot" target="_blank">Among Us Discord Bot</a> - Discord bot that helps to manage a waiting list for Among Us lobbies.</p>
 			<p><a style="color: inherit;" href="https://github.com/Minibeast/aminibOt" target="_blank">aminibOt</a> - Discord and Twitch bot that does misc stuff for my personal Twitch stream and Discord Server(s).</p>
 		</div>
-		<h1 id="footer" style="font-size: 25px; color: white"><span style="color: #2253D8">Blue:</span> #2253D8 (34,83,216)<br><span style="color: #2289D8">Lighter Blue:</span> #2289D8 (34,137,216)<br><span style="color: #8761AB">Purple:</span> #8761AB (135, 97, 171)</h1>
+
+		<h2 style="margin-left: 23%; padding-top: 30px;">Speedruns</h2>
+		<div class="content">
+			<select style="width: 300px;" id="gameSelect">
+				<option disabled selected value> -- select an option -- </option>
+				<option disabled value> - Main Games - </option>
+				<option value="Super Mario 64">Super Mario 64</option>
+				<option value="Super Mario Sunshine">Super Mario Sunshine</option>
+				<option value="Super Mario Odyssey">Super Mario Odyssey</option>
+				<option value="Multiple Mario Games">Multiple Mario Games</option>
+				<option value="Ocarina of Time Randomizer">Ocarina of Time Randomizer</option>
+				<option value="Portal">Portal</option>
+				<option value="Minecraft">Minecraft</option>
+				<option disabled value> - CEs and Rom Hacks - </option>
+				<option value="SMO Category Extensions">SMO Category Extensions</option>
+				<option value="SM64 Randomizer">SM64 Randomizer</option>
+				<option value="SM64 Online">SM64 Online</option>
+			</select>
+
+			<button class="gameSelectBtn" style="display: inline-block; text-align: center">Go</button>
+			<br>
+
+			<p id="pb_list"></p>
+		</div>
 	</div>
 
     <script src="livesplit_discord_download_count.js"></script>
-    <script src="hackathons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="speedruns.js"></script>
 </body>
 </html>

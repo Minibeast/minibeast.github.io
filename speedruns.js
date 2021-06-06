@@ -57,7 +57,7 @@ $(document).ready(function(){
 		if (game_name == "Ocarina of Time Randomizer")
 		{
 			document.getElementById("pb_list").innerHTML = "<br><iframe class=\"ootr_iframe\" width=\"100%\" height=\"600px\" src=\"https://docs.google.com/spreadsheets/d/1ksAlrZ50XSR4aD5fkJJ4UlWvx9ZY54inlFPqJNDy4tU/htmlview\"></iframe>";
-			$('.ootr_iframe').css('height', ($(window).height() / 2)+'px');
+			$('.ootr_iframe').css('height', ($(window).height() / 2.5)+'px');
 			return;
 		}
 
