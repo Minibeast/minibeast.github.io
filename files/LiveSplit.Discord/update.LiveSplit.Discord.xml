@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <updates>
+	<update version="1.6.5">
+		<files>
+			<file path="Components/LiveSplit.Discord.dll" status="changed"/>
+		</files>
+		<changelog>
+			<change>Added options to change the comparison used by the %delta option.</change>
+			<change>Added game_short option, which displays the shortened game name.</change>
+			<change>The %time option now has proper formatting.</change>
+			<change>Moved documentation to Markdown file in the GitHub Repository.</change>
+		</changelog>
+	</update>
 	<update version="1.6.1">
 		<files>
 			<file path="Components/LiveSplit.Discord.dll" status="changed"/>
