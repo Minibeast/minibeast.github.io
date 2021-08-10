@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <updates>
+	<update version="1.0.1">
+		<files>
+			<file path="Components/LiveSplit.SinceLastPB.dll" status="changed"/>
+		</files>
+		<changelog>
+			<change>Use Attempt History instead of Attempt Counter for attempts since.</change>
+		</changelog>
+	</update>
 	<update version="1.0.0">
 		<files>
 			<file path="Components/LiveSplit.SinceLastPB.dll" status="changed"/>
