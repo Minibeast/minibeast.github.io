@@ -41,34 +41,37 @@
                 </ul>
             </div>
 		</div>
-
-		<h2 style="margin-left: 23%; padding-top: 30px;">Projects</h2>
-		<div class="content">
-			<p><a href="https://minibeast.me/srdc-verification-analyzer/">SRDC verification analyzer</a> - Small data collection tool running on a Flask webserver. Used to collect verification statistics.</p>
-			<p><a href="https://github.com/Minibeast/LiveSplit.Discord">LiveSplit.Discord</a> - Component for <a href="https://livesplit.org">LiveSplit</a> that displays details about the user's current run.<br><span id="download_count"></span></p>
-			<p><a href="https://github.com/Minibeast/amongus-discord-bot">Among Us Discord Bot</a> - Discord bot that helps to manage a waiting list for Among Us lobbies.</p>
-			<p><a href="https://github.com/Minibeast/aminibOt">aminibOt</a> - Discord and Twitch bot that does misc stuff for my personal Twitch stream and Discord Server(s).</p>
+		<div class="column">
+			<h2 style="margin-left: 23%; padding-top: 30px;">Projects</h2>
+			<div class="content">
+				<p><a href="https://minibeast.me/srdc-verification-analyzer/">SRDC verification analyzer</a> - Small data collection tool running on a Flask webserver. Used to collect verification statistics.</p>
+				<p><a href="https://github.com/Minibeast/LiveSplit.Discord">LiveSplit.Discord</a> - Component for <a href="https://livesplit.org">LiveSplit</a> that displays details about the user's current run.<br><span id="download_count"></span></p>
+				<p><a href="https://github.com/Minibeast/LiveSplit.SinceLastPB">Since Last PB</a> - Component for <a href="https://livesplit.org">LiveSplit</a> that displays how many attempts or days since the last Personal Best.</p>
+				<p><a href="https://minibeast.me/splitmaker">Splitmaker</a> - Website that generates a LiveSplit comparison with evenly distributed timesave.</p>
+				<p>SMOBot Projects - A <a href="https://github.com/Minibeast/smo-lb-bot">Speedrun.com</a> and <a href="https://github.com/Tischel/SMOBot">Discord</a> bot that does various things for the Super Mario Odyssey Speedrunning community.</p>
+			</div>
 		</div>
+		<div class="column">
+			<h2 style="margin-left: 23%; padding-top: 30px;"><a href="https://minibeast.me/speedruns">Speedruns</a></h2>
+			<div class="content">
+				<select style="width: 300px;" id="gameSelect">
+					<option disabled value> - Main Games - </option>
+					<option selected value="sm64">Super Mario 64</option>
+					<option value="sms">Super Mario Sunshine</option>
+					<option value="smo">Super Mario Odyssey</option>
+					<option value="oot">Ocarina of Time</option>
+					<option value="OoTR">Ocarina of Time Randomizer</option>
+					<option value="portal">Portal</option>
+					<option value="p2">Portal 2</option>
+					<option value="hl1">Half-Life</option>
+					<option disabled value> - CEs and Rom Hacks - </option>
+					<option value="smoce">SMO Category Extensions</option>
+					<option value="sm64r">SM64 Randomizer</option>
+				</select>
+				<br>
 
-		<h2 style="margin-left: 23%; padding-top: 30px;"><a href="https://minibeast.me/speedruns">Speedruns</a></h2>
-		<div class="content">
-			<select style="width: 300px;" id="gameSelect">
-				<option disabled value> - Main Games - </option>
-				<option selected value="sm64">Super Mario 64</option>
-				<option value="sms">Super Mario Sunshine</option>
-				<option value="smo">Super Mario Odyssey</option>
-				<option value="oot">Ocarina of Time</option>
-				<option value="OoTR">Ocarina of Time Randomizer</option>
-				<option value="portal">Portal</option>
-				<option value="p2">Portal 2</option>
-				<option value="hl1">Half-Life</option>
-				<option disabled value> - CEs and Rom Hacks - </option>
-				<option value="smoce">SMO Category Extensions</option>
-				<option value="sm64r">SM64 Randomizer</option>
-			</select>
-			<br>
-
-			<p id="pb_list"></p>
+				<p id="pb_list"></p>
+			</div>
 		</div>
 	</div>
 

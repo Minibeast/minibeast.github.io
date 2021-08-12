@@ -6,7 +6,6 @@ body {
 }
 
 h1 {
-	color: #2289D8;
 	text-align: center; 
 	padding-top: 15px;
 }
@@ -31,13 +30,6 @@ h1 {
     text-align: center;
 }
 
-button.gameSelectBtn {
-    width: 200px;
-    background-color: #E7E1E1;
-    border: none;
-    border-radius: 1vw;
-}
-
 button.hackathons {
     background: none;
     border: none;
@@ -45,47 +37,6 @@ button.hackathons {
     font-weight: bold;
 }
 
-i {
-    position: relative; /** ADD THIS TO i TAG. This do magic! It's necessary **/
-    font-weight: bold;
-    font-style: normal;
-}
-
-i span {
-    visibility: hidden;
-    opacity:  0;
-    position: absolute; /** It's necessary to do magic **/
-    top: 4px;
-    right: 100%;
-    text-align: center; /** If You want tooltip text centered **/
-    padding: 5px; /** Tooltip padding **/
-    width: 200px; /** Tooltip width. You can set 100% to cover all "i" tag **/
-    height: auto; /** Auto is good choice **/
-    background: #000; /** Tooltip background **/
-    color: #fff; /** Tooltip text color **/
-
-    border: none;
-    border-radius: 1vw;
-
-
-    transition-duration: 0.2s; /** Animation duration **/
-    transition-property: opacity; /** Apply animation only on opacity rule **/
-    
-    /** Compatibility with other Browsers */
-    -moz-transition-duration: 0.2s;
-    -moz-transition-property: opacity;
-    -o-transition-duration: 0.2s;
-    -o-transition-property: opacity;
-    -ms-transition-duration: 0.2s;
-    -ms-transition-property: opacity;
-    -webkit-transition-duration: 0.2s;
-    -webkit-transition-property: opacity;
-}
-
-i:hover span {
-    visibility: visible;
-    opacity: 1;
-}
 
 #download_count {
     font-style: italic;
@@ -108,6 +59,12 @@ i:hover span {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
 }
 
 a {
