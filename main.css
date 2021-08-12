@@ -61,16 +61,18 @@ button.hackathons {
     align-items: center;
 }
 
-.column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-}
-
 a {
     color: inherit;
 }
 
 a:hover {
     color: inherit;
+}
+
+@media only screen and (min-device-width: 720px) {
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+    }
 }
